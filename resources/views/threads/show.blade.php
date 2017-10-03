@@ -45,7 +45,7 @@
     @else
     <p class="text-center">
         Please 
-        <a href="{{ route('login') }}" 
+        <a href="{{ route('login') }}">
            sign in 
         </a>
         to participate in this discussion
