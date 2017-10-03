@@ -5,6 +5,9 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
+/**
+* @phpunitG ReadThreadsTest
+*/
 class ReadThreadsTest extends TestCase
 {
     use DatabaseMigrations;

@@ -6,6 +6,9 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+/**
+* @phpunitG ReplyTest
+*/
 class ReplyTest extends TestCase
 {
     use DatabaseMigrations;

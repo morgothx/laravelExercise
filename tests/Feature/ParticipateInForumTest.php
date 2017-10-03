@@ -7,6 +7,9 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+/**
+* @phpunitG ParticipateInForumTest
+*/
 class ParticipateInForumTest extends TestCase
 {
     use DatabaseMigrations;
