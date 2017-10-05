@@ -32,7 +32,7 @@ class ThreadController extends Controller
             'title' => request('title'),
             'body' => request('body')
         ]);
-        return redirect('/threads/' . $thread->id);
+        return redirect($thread->path());
     }
 
     public function show($channelId, Thread $thread)

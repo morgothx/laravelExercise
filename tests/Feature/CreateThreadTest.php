@@ -32,11 +32,11 @@ class CreateThreadTest extends TestCase
     /** @test */
     public function an_authenticated_user_can_create_new_threads()
     {
-        $this->actingAs(factory('App\User')->create());
-        $thread = factory('App\Thread')->create();
-        $this->post('/threads', $thread->toArray());
-        $response = $this->get($thread->path());
-        $response->assertSee($thread->title)
+        $this->signIn();
+        $thread = make('App\Thread');
+        $response = $this->post('/threads', $thread->toArray());
+        $this->get($response->headers->get('Location'))
+                ->assertSee($thread->title)
                 ->assertSee($thread->body);
     }
 }
