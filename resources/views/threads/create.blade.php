@@ -19,7 +19,7 @@
                                 <option value='' disabled="" selected="">
                                     Choose one
                                 </option>
-                                @foreach(A$channels as $channel)
+                                @foreach($channels as $channel)
                                 <option value="{{ $channel->id }}" {{ old('channel_id') == $channel->id ? 'selected' : '' }} >
                                     {{ $channel->name }}
                                 </option>

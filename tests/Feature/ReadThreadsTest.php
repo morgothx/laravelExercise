@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-
 /**
 * @phpunitG ReadThreadsTest
 */
@@ -57,10 +56,11 @@ class ReadThreadsTest extends TestCase
     /** @test */
     public function a_user_can_filter_threads_by_any_username()
     {
-        $this->signIn(create('App\User', ['name' => 'Camilo']));
+        $user = create('App\User', ['name' => 'Camilo']);
+        $this->signIn($user);
         $threadByCamilo = create('App\Thread', ['user_id' => auth()->id()]);
         $threadNotByCamilo = create('App\Thread');
-        $this->get('threads?by=camilo')
+        $this->get('threads?by=Camilo')
                 ->assertSee($threadByCamilo->title)
                 ->assertDontSee($threadNotByCamilo->title);
     }
